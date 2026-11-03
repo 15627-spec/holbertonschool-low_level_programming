@@ -1,4 +1,4 @@
-julien@ubuntu:~/$ cat 0-main.c
+ cat 0-main.c
 #include "main.h"
 #include <stdio.h>
 
