@@ -1,9 +1,32 @@
- cat 0-main.c
+cat > main.h << 'EOF'
+#ifndef MAIN_H
+#define MAIN_H
+
+void reset_to_98(int *n);
+
+#endif /* MAIN_H */
+EOF
+cat > 0-reset_to_98.c << 'EOF'
+#include "main.h"
+
+/**
+ * reset_to_98 - updates the value pointed to by n to 98
+ * @n: pointer to the integer to update
+ *
+ * Return: nothing.
+ */
+void reset_to_98(int *n)
+{
+    *n = 98;
+}
+EOF
+sed -i 's/^    /\t/' 0-reset_to_98.c
+cat > 0-main.c << 'EOF'
 #include "main.h"
 #include <stdio.h>
 
 /**
- * main - check the code 
+ * main - check the code
  *
  * Return: Always 0.
  */
@@ -17,8 +40,4 @@ int main(void)
     printf("n=%d\n", n);
     return (0);
 }
-julien@ubuntu:~/$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-reset_to_98.c -o 0-98
-julien@ubuntu:~/$ ./0-98 
-n=402
-n=98
-julien@ubuntu:~/$ 
+EOF
