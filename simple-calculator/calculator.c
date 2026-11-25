@@ -4,6 +4,8 @@ int main(void)
 {
     int choice;
 
+    /* Declare your addition variables here */
+
     do
     {
         printf("Simple Calculator\n");
@@ -23,6 +25,20 @@ int main(void)
         else if (choice < 0 || choice > 4)
         {
             printf("Invalid choice\n");
+        }
+        else if (choice == 1)
+        {
+            /* Ask for the first number */
+
+            /* Read the first number */
+
+            /* Ask for the second number */
+
+            /* Read the second number */
+
+            /* Calculate the sum */
+
+            /* Display the result */
         }
 
     } while (choice != 0);
