@@ -1,45 +1,18 @@
-#include <stdio.h>
-
-int main(void)
+else if (choice == 4)
 {
-    int choice;
+    printf("A: ");
+    scanf("%d", &A);
 
-    /* Declare your calculation variables here */
+    printf("B: ");
+    scanf("%d", &B);
 
-    do
+    if (B == 0)
     {
-        printf("Simple Calculator\n");
-        printf("1) Add\n");
-        printf("2) Subtract\n");
-        printf("3) Multiply\n");
-        printf("4) Divide\n");
-        printf("0) Quit\n");
-
-        printf("what should we calculate today ?\n");
-        scanf("%d", &choice);
-
-        if (choice == 0)
-        {
-            printf("Bye!\n");
-        }
-        else if (choice < 0 || choice > 4)
-        {
-            printf("Invalid choice\n");
-        }
-        else if (choice == 1)
-        {
-            /* Addition */
-        }
-        else if (choice == 2)
-        {
-            /* Subtraction */
-        }
-        else if (choice == 3)
-        {
-            /* Multiplication */
-        }
-
-    } while (choice != 0);
-
-    return (0);
+        printf("Error: Division by zero is not allowed.\n");
+    }
+    else
+    {
+        result = A / B;
+        printf("Result: %d\n", result);
+    }
 }
