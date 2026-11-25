@@ -4,7 +4,7 @@ int main(void)
 {
     int choice;
 
-    /* Declare your addition variables here */
+    /* Declare your calculation variables here */
 
     do
     {
@@ -28,17 +28,15 @@ int main(void)
         }
         else if (choice == 1)
         {
-            /* Ask for the first number */
-
-            /* Read the first number */
-
-            /* Ask for the second number */
-
-            /* Read the second number */
-
-            /* Calculate the sum */
-
-            /* Display the result */
+            /* Addition */
+        }
+        else if (choice == 2)
+        {
+            /* Subtraction */
+        }
+        else if (choice == 3)
+        {
+            /* Multiplication */
         }
 
     } while (choice != 0);
